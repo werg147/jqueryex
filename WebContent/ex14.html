@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>이벤트</h1>
+	
+	<!-- ~ 할 때 ***작동해라-->
+	
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+	
+	<h3 class="tagH3">네이버</h3>
+	<h3 class="tagH3">다음</h3>
+	
+	<div>
+		<button id="btn">자바스크립트 테스트 버튼</button>
+	</div>
+	
+	<p id="display">
+		
+	</p>
+	
+	<p id="display2">
+		
+	</p>
+	
+	
+	<script type="text/javascript">
+		//문서가 로딩됐을때
+		window.onload = function(){
+			//id
+			var testButton = document.getElementById("btn"); 
+            var textArea = document.getElementById("display");
+            console.log(testButton);
+            console.log(textArea);
+            
+            //tag h2
+            //태그 h2 하나여도 배열모양으로 담긴다
+            //[<h2>h2태그_1</h2>, <h2>h2태그_2</h2>, <h2>h2태그_3</h2>]
+            var tagArray = document.getElementsByTagName("h2");
+            console.log(tagArray);
+            
+            //calss h3
+            //태그 h3
+            //[<h3 class="tagH3">h3태그_1</h3>, <h3 class="tagH3">h3태그_2</h3>]
+            var tagH3Array = document.getElementsByClassName("tagH3");
+            var textArea2 = document.getElementById("display2");
+            console.log(tagH3Array);
+            console.log(textArea2);
+            
+            
+            
+            //기능은 정의되고 클릭해야 작동된다.
+			testButton.onclick = function(){
+				console.log("버튼클릭");
+				textArea.innerHTML="<font color='#ff0000'>홍길동</font>";
+			};
+
+			//h2태그_1 클릭했을때
+			tagArray[0].onclick = function(){
+				console.log("h2태그_1");
+				textArea.innerHTML="<font color='#00ff00'>h2태그_1</font>"
+			};
+			
+			//h2태그_2 클릭했을때
+			tagArray[1].onclick = function(){
+				console.log("h2태그_2");
+				textArea.innerHTML="<font color='#00ff00'>h2태그_2</font>"
+			};
+			
+			//h2태그_3 클릭했을때
+			tagArray[2].onclick = function(){
+				console.log("h2태그_3");
+				textArea.innerHTML="<font color='#00ff00'>h2태그_3</font>"
+			};
+			
+			//h3태그_1 클릭했을때
+			tagH3Array[0].onclick = function(){
+				console.log("네이버");
+				textArea2.innerHTML="<a href='http://www.naver.com' target='_blank'>네이버</a>";
+			};
+			
+			//h3태그_2 클릭했을때
+			tagH3Array[1].onclick = function(){
+				console.log("다음");
+				textArea2.innerHTML="<a href='http://www.daum.net' target='_blank'>다음</a>";
+			};
+			
+		};
+	
+		
+		
+		
+	</script>
+	
+	
+	
+	
+	
+	
+	<!-- 마우스 클릭 할 때 ~~~실행되라-->
+	<!-- 키보드를 입력할 때 ~~~ 실행되라 -->
+	<!-- 마우스를 드래그 할 때 -->
+
+</body>
+</html>

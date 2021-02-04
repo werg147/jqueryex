@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>객체</h1>
+	
+	<script type="text/javascript">
+		
+		//GuestbookVo guestbookVo = new GuestbookVo();
+		//{} 객체.. : 주의
+		
+		var guestbookVo = {
+				name : "김이름",
+				password : "123",
+				content : "안녕하세요",
+				showInfo : function(){
+					console.log(this.name + "," + this.password + "," + this.content);
+				}
+						   
+		};
+		
+		var name = guestbookVo.name;
+		console.log(name);
+		
+		console.log(guestbookVo.name);
+		console.log(guestbookVo.password);
+		console.log(guestbookVo.content);
+		
+		guestbookVo.showInfo();
+		
+		console.log("================================")
+		
+		//person관리 배열
+		var personList = [];
+		
+		//미리 정의할 때 -> :
+		var person01 = {
+			name : "정우성",
+			hp : "010-1111-2222"
+		};
+		
+		console.log(person01);
+		
+		//후에 정의할 때 -> =
+		var person02 = {};
+		person02.name = "유재석";
+		person02.hp = "010-9999-9999";
+		
+		console.log(person02);
+		
+		var person03 = {
+				name: "이효리"
+		};
+		person03.hp = "010-5555-5555";
+		
+		console.log(person03);
+		
+		//리스트(배열)에 정우성 추가
+		personList.push(person01);
+		
+		//리스트(배열)에 유재석  추가
+		personList.push(person02);
+		
+		//리스트(배열)에 이효리 추가
+		personList.push(person03);
+		
+		//출력
+		console.log(personList);
+		
+		console.log("------------------");
+		
+		//전체 이름만 출력
+		for(var i=0; i<personList.length; i++){
+			console.log(personList[i].name);
+		}
+	
+	
+	
+	</script>
+
+
+</body>
+</html>

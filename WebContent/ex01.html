@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>자바스크립트 자료형</h1>
+
+<script type="text/javascript">
+	
+	/* console.log() 설명 */
+	
+	console.log("타입설명");
+	
+	/* 기본자료형 number, string, boolean 3가지가 있다. */
+	//String -> string
+
+	console.log(typeof 1);  /* number */ //number
+	console.log(typeof 1.5); //number
+	console.log(typeof '한'); //string --> '', "" 상관없다
+	console.log(typeof "안녕하세요"); //string
+	console.log(typeof (6>5)); //boolean
+	console.log(typeof (6<5)); //boolean	
+	
+	console.log("===============================================");
+	
+</script>
+
+<script type="text/javascript">
+	/* number형 확인 */
+	console.log("number형 확인");
+	
+	console.log(13+5); //18
+	console.log(13-5); //8
+	console.log(13*5); //65
+	console.log(13/5); //2.6
+	console.log(13%5); // 2...3 (나머지 3)
+	console.log(13+5.2); //18.2
+	console.log(5+3*2); //11
+	console.log((5+3)*2); //16
+
+	console.log("===============================================");
+</script>
+
+<script type="text/javascript">
+	/* string형 확인 */
+	console.log("string형 확인");
+	
+	console.log("동해물과 백두산이");
+	console.log('동해물과 백두산이');
+	
+	//동해물과 '백두산'이
+	console.log("동해물과 '백두산'이");
+	
+	//동해물과 "백두산"이
+	console.log('동해물과 "백두산"이');
+	
+	console.log("동해물과 \"백두산\"이");
+	console.log('동해물과 \'백두산\'이');
+	
+	console.log("동해물과 \n백두산이");
+	console.log("동해물과\t백두산이");
+	console.log("동\t백두산이");
+	
+	var no = 1234;
+	console.log("동해물과" + no + "백두산이");
+	
+	console.log("===============================================");
+
+</script>
+
+<script type="text/javascript">
+	/* boolean형 확인 */
+	console.log("boolean형 확인");
+
+	console.log( 52>273 ); //false
+	console.log( 52<273 ); //true
+	console.log( 273==273 ); //true
+	console.log( 1234 == no ); //true
+	
+</script>
+
+
+</body>
+</html>
